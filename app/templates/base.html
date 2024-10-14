@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PyZone{% endblock %}</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/bundle.css') }}">
+    {% block head %}{% endblock %} <!-- Placeholder for page-specific head elements -->
+</head>
+<body>
+    <header>
+        {% include 'includes/_navbar.html' %}  <!-- Include the navigation bar -->
+    </header>
+
+    <main>
+        {% block content %} 
+        <!-- Main content that will be overridden in child templates -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% include 'includes/_footer.html' %}  <!-- Include the footer -->
+    </footer>
+
+    <!-- Scripts at the bottom for faster page loading -->
+    <script src="{{ url_for('static', filename='dist/bundle.js') }}"></script>
+    {% block scripts %}{% endblock %} <!-- Placeholder for page-specific scripts -->
+</body>
+</html>
