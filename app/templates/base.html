@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sl-theme-dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}PyZone{% endblock %}</title>
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='dist/bundle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/main.css') }}">
     {% block head %}{% endblock %} <!-- Placeholder for page-specific head elements -->
 </head>
 <body>
@@ -24,7 +24,7 @@
     </footer>
 
     <!-- Scripts at the bottom for faster page loading -->
-    <script src="{{ url_for('static', filename='dist/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='dist/js/bundle.js') }}"></script>
     {% block scripts %}{% endblock %} <!-- Placeholder for page-specific scripts -->
 </body>
 </html>
